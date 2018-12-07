@@ -1,6 +1,6 @@
 {
   "name": "what-browser",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "detect browser name and version from user agent",
   "main": "dist/whatBrowser.js",
   "module": "dist/whatBrowser.esm.js",
