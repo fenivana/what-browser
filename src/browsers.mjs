@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   [/Edge\/(\d+)\.(\d+)/, 'Edge'],
   [/Chrome\/(\d+)\.(\d+)/, 'Chrome'],
   [/(?:iPod|iPod touch|iPhone|iPad).*OS (\d+)_(\d+)/, 'Mobile Safari'],

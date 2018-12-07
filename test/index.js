@@ -1,5 +1,5 @@
+const whatBrowser = require('..')
 const browsers = require('./browsers')
-const whatBrowser = require('../src')
 const assert = require('assert')
 
 for (const bro of browsers) {

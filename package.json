@@ -2,36 +2,49 @@
   "name": "what-browser",
   "version": "0.1.0",
   "description": "detect browser name and version from user agent",
-  "main": "src/index.js",
+  "main": "dist/whatBrowser.js",
+  "module": "dist/whatBrowser.esm.js",
   "scripts": {
-    "test": "node tests"
+    "build": "rollup -c rollup.config.esm.mjs && rollup -c rollup.config.umd.mjs",
+    "test": "node test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fenivana/what-browser.git"
+    "url": "git+https://github.com/jiangfengming/what-browser.git"
   },
   "keywords": [
-    "user",
-    "agent"
+    "user agent"
   ],
   "author": "Jiang Fengming",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fenivana/what-browser/issues"
+    "url": "https://github.com/jiangfengming/what-browser/issues"
   },
-  "homepage": "https://github.com/fenivana/what-browser#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/jiangfengming/what-browser#readme",
   "devDependencies": {
-    "eslint": "^4.5.0",
-    "eslint-config-enough": "^0.2.8"
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-config-enough": "^0.3.4",
+    "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^4.0.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "loose": true,
+          "modules": false
+        }
+      ]
+    ]
   },
   "eslintConfig": {
-    "parserOptions": {
-      "ecmaVersion": 8
-    },
     "extends": "enough",
     "env": {
-      "node": true
+      "browser": true
     }
   }
 }

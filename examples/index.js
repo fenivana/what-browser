@@ -1,7 +1,7 @@
 /* eslint no-console: "off" */
 
-const whatBrowser = require('../src')
-const browsers = require('../tests/browsers')
+const whatBrowser = require('..')
+const browsers = require('../test/browsers')
 
 for (const bro of browsers) {
   console.log('User-Agent:', bro[0])

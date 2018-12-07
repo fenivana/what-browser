@@ -1,8 +1,8 @@
-const browsers = require('./browsers')
+import browsers from './browsers'
 
-module.exports = function(ua) {
+function whatBrowser(userAgent) {
   for (const bro of browsers) {
-    const match = ua.match(bro[0])
+    const match = userAgent.match(bro[0])
     if (match) {
       return {
         name: bro[1],
@@ -13,3 +13,5 @@ module.exports = function(ua) {
 
   return null
 }
+
+export default whatBrowser
