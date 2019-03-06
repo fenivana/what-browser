@@ -4,7 +4,7 @@ export default {
   input: 'src/index.mjs',
   output: {
     format: 'es',
-    file: 'dist/whatBrowser.esm.js'
+    file: 'dist/whatBrowser.mjs'
   },
   plugins: [
     babel()

@@ -1,8 +1,8 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global.whatBrowser = factory());
-}(this, (function () { 'use strict';
+  (global = global || self, global.whatBrowser = factory());
+}(this, function () { 'use strict';
 
   var browsers = [[/Edge\/(\d+)\.(\d+)/, 'Edge'], [/Chrome\/(\d+)\.(\d+)/, 'Chrome'], [/(?:iPod|iPod touch|iPhone|iPad).*OS (\d+)_(\d+)/, 'Mobile Safari'], [/Version\/(\d+)\.(\d+).*Safari/, 'Safari'], [/Firefox\/(\d+)\.(\d+)/, 'Firefox'], [/Trident.*rv.(\d+)\.(\d+)/, 'IE'], [/MSIE (\d+)\.(\d+)/, 'IE']];
 
@@ -35,4 +35,4 @@
 
   return whatBrowser;
 
-})));
+}));

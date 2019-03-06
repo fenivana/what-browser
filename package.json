@@ -2,8 +2,7 @@
   "name": "what-browser",
   "version": "0.2.0",
   "description": "detect browser name and version from user agent",
-  "main": "dist/whatBrowser.js",
-  "module": "dist/whatBrowser.esm.js",
+  "main": "dist/whatBrowser",
   "scripts": {
     "build": "rollup -c rollup.config.esm.mjs && rollup -c rollup.config.umd.mjs",
     "test": "node test"
@@ -22,13 +21,13 @@
   },
   "homepage": "https://github.com/jiangfengming/what-browser#readme",
   "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.9.0",
+    "eslint": "^5.15.1",
     "eslint-config-enough": "^0.3.4",
-    "rollup": "^0.67.4",
-    "rollup-plugin-babel": "^4.0.3"
+    "rollup": "^1.4.1",
+    "rollup-plugin-babel": "^4.3.2"
   },
   "babel": {
     "presets": [
@@ -44,7 +43,8 @@
   "eslintConfig": {
     "extends": "enough",
     "env": {
-      "browser": true
+      "browser": true,
+      "node": true
     }
   }
 }
