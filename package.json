@@ -1,6 +1,6 @@
 {
   "name": "what-browser",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "detect browser name and version from user agent",
   "main": "dist/whatBrowser",
   "scripts": {
